@@ -1,0 +1,19 @@
+import pyttsx3
+# engine = pyttsx3.init('sapi5')
+# voices = engine.getProperty('voices')
+# engine.setProperty('voices',voices[1].id)
+
+file = open("C:\\Users\\USER\\Desktop\\data.log", "r")
+f = file.read()
+print(f)
+def speak(audio):
+    engine = pyttsx3.init('sapi5')
+    engine = pyttsx3.init('sapi5')
+    voices = engine.getProperty('voices')
+    engine.setProperty('voices', voices[1].id)
+    engine.setProperty('rate', 150)
+    engine.say(audio)
+    engine.runAndWait()
+
+speak(f)
+

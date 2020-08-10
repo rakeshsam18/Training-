@@ -1,0 +1,63 @@
+import random
+def let_user_pick(options):
+    print("Please choose:")
+    for idx, element in enumerate(options):
+        print("{}) {}".format(idx+1,element))
+    i = int(input("Enter number: "))
+    sunshine = options[i-1]
+    if sunshine == "Virgo":
+        horoscop_virgo(sunshine)
+    elif sunshine == "Leo":
+         horoscope_leo(sunshine)
+    elif sunshine == "Cancer":
+         horoscope_Cancer(sunshine)
+    elif sunshine == "Capricorn":
+         horoscope_Capricorn(sunshine)
+    elif sunshine == "Torus":
+        horoscope_Capricorn(sunshine)
+    elif sunshine == "Libra":
+        horoscope_Libra(sunshine)
+
+
+    else:
+        print("Sorry horoscop is not available")
+def horoscop_virgo(sunshine):
+        num = random.randint(0,2)
+        file = open("C:\\Users\\USER\\Desktop\\horo\\Virgo.txt",'r')
+        text = file.readlines()
+        print(text[num])
+        file.close()
+def horoscope_Cancer(sunshine):
+        num = random.randint(0, 2)
+        file = open("C:\\Users\\USER\\Desktop\\horo\\Cancer.txt", 'r')
+        text = file.readlines()
+        print(text[num])
+        file.close()
+
+
+def horoscope_Capricorn(sunshine):
+        num = random.randint(0, 2)
+        file = open("C:\\Users\\USER\\Desktop\\horo\\Capricorn.txt", 'r')
+        text = file.readlines()
+        print(text[num])
+        file.close()
+
+
+def horoscope_Torus(sunshine):
+        num = random.randint(0, 2)
+        file = open("C:\\Users\\USER\\Desktop\\horo\\Torus.txt", 'r')
+        text = file.readlines()
+        print(text[num])
+        file.close()
+
+
+def horoscope_Libra(sunshine):
+        num = random.randint(0, 2)
+        file = open("C:\\Users\\USER\\Desktop\\horo\\Libra.txt", 'r')
+        text = file.readlines()
+        print(text[num])
+        file.close()
+
+options = ["Capricorn","Virgo", "Cancer", "Torus","Libra","Gemini","Leo","Scorpio","Aqurius","Pisces","Aries","Sagittarius"]
+
+let_user_pick(options)
